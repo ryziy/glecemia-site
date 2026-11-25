@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GLEKEMIA — одежда бренда, каталог</title>
+<meta name="description" content="GLEKEMIA — бренд одежды. Каталог, доставка Новой почтой по Украине и в страны Европы.">
+<link rel="canonical" href="https://glecemia.com/">
+<meta property="og:title" content="GLEKEMIA">
+<meta property="og:description" content="Бренд одежды GLEKEMIA. Первая коллекция.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://glecemia.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%91%95%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap">
+<style>
+:root{--bg:#fff;--fg:#111;--mute:#777;--line:#e8e8e8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Inter",-apple-system,"Helvetica Neue",Arial,sans-serif;line-height:1.5}
+button,select,input{font:inherit;color:var(--fg)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:22px 0;border-bottom:1px solid var(--line)}
+.logo{font-weight:600;letter-spacing:.3em;font-size:18px;grid-column:2}
+.right{grid-column:3;justify-self:end;display:flex;gap:8px;align-items:center}
+.cur,.cartbtn{border:1px solid var(--line);background:#fff;border-radius:8px;padding:6px 10px;font-size:13px;cursor:pointer}
+.hero{display:flex;justify-content:center;padding:48px 0 40px}
+.bfw{display:inline-flex;align-items:center;transform:rotate(-4deg)}
+.bf{font-family:"Nothing You Could Do","Segoe Script","Bradley Hand",cursive;font-weight:400;font-size:clamp(40px,11vw,76px);line-height:1;color:#d11;white-space:nowrap}
+.bf i{display:inline-block;font-style:normal}
+
+
+.shop{display:inline-block;padding:9px 22px;border-radius:10px;border:1px solid rgba(0,0,0,.12);background:rgba(0,0,0,.05);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:var(--fg);font-size:13px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:28px 20px;padding-bottom:72px}
+.card{cursor:pointer}
+.img{aspect-ratio:4/5;border:1px solid var(--line);border-radius:4px;display:flex;align-items:center;justify-content:center;transition:transform .3s}
+.card:hover .img{transform:translateY(-4px)}
+.shape{width:46%;height:52%;border-radius:6px 6px 14px 14px;border:1px solid rgba(0,0,0,.15)}
+.meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 10px;padding-top:12px;font-size:15px}
+.meta span:last-child{color:var(--mute);white-space:nowrap}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--mute);font-size:14px;text-align:center}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.3);opacity:0;pointer-events:none;transition:opacity .25s;z-index:20}
+.ov.on{opacity:1;pointer-events:auto}
+.x{border:0;background:none;font-size:26px;cursor:pointer;line-height:1}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:#fff;z-index:22;transform:translateX(100%);transition:transform .3s;display:flex;flex-direction:column;padding:calc(18px + env(safe-area-inset-top,0px)) 20px calc(18px + env(safe-area-inset-bottom,0px));border-left:1px solid var(--line)}
+.drawer.on{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:14px}
+.list{flex:1;overflow-y:auto}
+.row{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);align-items:center}
+.th{width:48px;height:60px;border:1px solid var(--line);border-radius:4px;flex:none}
+.inf{flex:1;font-size:14px}
+.inf small{color:var(--mute);display:block}
+.qty{display:flex;align-items:center;gap:8px;margin-top:6px}
+.qty button{width:24px;height:24px;border:1px solid var(--line);background:#fff;border-radius:6px;cursor:pointer}
+.rm{border:0;background:none;color:var(--mute);cursor:pointer;font-size:12px;text-decoration:underline}
+.empty{color:var(--mute);text-align:center;padding:40px 0;font-size:14px}
+.tot{display:flex;justify-content:space-between;padding:16px 0 12px;font-weight:600}
+.btn{width:100%;padding:12px;border:1px solid var(--fg);border-radius:8px;background:var(--fg);color:#fff;font-size:13px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;display:block;text-align:center;text-decoration:none;margin-top:8px}
+.btn.alt{background:#fff;color:var(--fg)}
+.btn:disabled{opacity:.3;cursor:default}
+.note{color:var(--mute);font-size:12px;text-align:center;margin-top:10px}
+label{display:block;font-size:12px;color:var(--mute);margin:12px 0 4px}
+input,select.f{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;background:#fff;font-size:15px}
+.err{border-color:#c00}
+.pv{position:fixed;inset:0;z-index:21;background:#fff;overflow-y:auto;transform:translateY(100%);transition:transform .3s;visibility:hidden;padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+.pv.on{transform:none;visibility:visible}
+.pvh{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:2}
+.pvb{max-width:1000px;margin:0 auto;padding:24px 20px 60px;display:grid;grid-template-columns:1.1fr 1fr;gap:36px}
+@media(max-width:760px){.pvb{grid-template-columns:1fr;gap:22px}}
+.gal{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:4px}
+.trk{display:flex;transition:transform .35s}
+.sl{flex:none;width:100%;aspect-ratio:4/5;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--mute);font-size:13px}
+.sl .shape{width:42%;height:46%}
+.ar{position:absolute;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.85);cursor:pointer;font-size:18px}
+.ar.l{left:10px}.ar.r{right:10px}
+.dts{display:flex;justify-content:center;gap:8px;margin-top:10px}
+.dts i{width:8px;height:8px;border-radius:50%;border:1px solid var(--fg);cursor:pointer}
+.dts i.on{background:var(--fg)}
+.pvi h2{font-weight:400;font-size:24px;margin:0 0 4px}
+.sizes{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 6px}
+.sz{min-width:48px;padding:10px 12px;border:1px solid var(--line);background:#fff;border-radius:8px;cursor:pointer}
+.sz[aria-pressed="true"]{background:var(--fg);color:#fff;border-color:var(--fg)}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:8px}
+th,td{padding:9px 8px;border-bottom:1px solid var(--line);text-align:center}
+th{color:var(--mute);font-weight:400}
+tr.sel td{background:#f2f2f2;font-weight:600}
+.old{position:relative;display:inline-block;color:var(--mute);margin-right:8px}
+.scr{position:absolute;left:-4px;top:-2px;width:calc(100% + 8px);height:calc(100% + 4px);pointer-events:none;overflow:visible}
+.new{color:var(--fg);font-weight:500}
+.em{color:#c00;font-size:12px;margin-top:4px}
+.hint{font-size:12px;color:var(--mute);margin-top:4px}
+.ph{display:flex;align-items:center;border:1px solid var(--line);border-radius:8px;background:#fff}
+.ph span{padding-left:10px;color:var(--mute);white-space:nowrap}
+.ph input{border:0;background:none;padding-left:6px}
+.msg{background:#f6f6f6;border-radius:8px;padding:12px;font-size:13px;white-space:pre-wrap;margin-top:10px;max-height:160px;overflow:auto}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><div class="logo">GLEKEMIA</div>
+<div class="right"><select class="cur" id="cur" aria-label="Валюта"><option value="EUR">€ EUR</option><option value="USD">$ USD</option><option value="UAH">₴ UAH</option></select>
+<button class="cartbtn" id="open">Корзина (<span id="cnt">0</span>)</button></div></header>
+<section class="hero"><div class="bfw"><div class="bf" id="bf" aria-label="Black Friday">Black Friday</div></div></section>
+<div class="grid" id="grid"></div>
+<footer>© 2026 GLEKEMIA</footer>
+</div>
+
+<section class="pv" id="pv" aria-label="Товар">
+<div class="pvh"><span style="letter-spacing:.3em;font-weight:600;font-size:14px">GLEKEMIA</span><button class="x" id="pvx" aria-label="Закрыть">×</button></div>
+<div class="pvb">
+<div><div class="gal"><div class="trk" id="trk"></div><button class="ar l" id="pl" aria-label="Назад">‹</button><button class="ar r" id="pr" aria-label="Вперёд">›</button></div><div class="dts" id="dts"></div></div>
+<div class="pvi"><h2 id="pn"></h2><div id="pp" style="color:var(--mute)"></div>
+<label>Размер</label><div class="sizes" id="szs"></div><div id="tw" style="display:none"><label>Таблица замеров, см</label><table id="tbl"></table></div>
+<button class="btn" id="addc">Добавить в корзину</button><div class="note" id="pnote"></div></div>
+
+</div></section>
+
+<div class="ov" id="ov"></div>
+<aside class="drawer" id="dr" aria-label="Корзина">
+<div class="dh"><span id="dt">Корзина</span><button class="x" id="close" aria-label="Закрыть">×</button></div>
+<div class="list" id="list"></div>
+<div id="foot"><div class="tot"><span>Итого</span><span id="sum"></span></div><button class="btn" id="buy">Оформить заказ</button></div>
+</aside>
+
+<script>
+var ORDER_URL="/api/order",TG="glecemia",EMAIL="contact.glecemia@gmail.com";
+var EU=["Польша","Литва","Латвия","Эстония","Чехия","Словакия","Венгрия","Германия","Италия","Испания","Румыния","Молдова","Австрия","Франция","Нидерланды","Великобритания"];
+var rates={EUR:1,USD:49.49/45.12,UAH:49.49},sym={EUR:"€",USD:"$"};
+var SZ=["XS","S","M","L","XL"];
+var M2=[["S",69,49],["M",70,51],["L",72,53],["XL",74,54]];
+var meas=function(l,w){return SZ.map(function(s,i){return [s,l+i*2,w+i*2]})};
+var items=[
+{id:11,n:"Lifeline of love White",p:900/49.49,o:1100/49.49,c:"#ffffff",m:M2},
+{id:12,n:"Lifeline of love Black",p:900/49.49,o:1100/49.49,c:"#111111",m:M2}
+];
+// Старые товары: после Black Friday вернуть в items
+var later=[
+{id:1,n:"Longsleeve Pain",p:39,c:"#ffffff",m:meas(64,50)},
+{id:2,n:"Hoodie Lindsay Lohan",p:79,c:"#111111",m:meas(66,54)},
+{id:3,n:"Pants Dirty",p:69,c:"#555555",m:meas(98,38)},
+{id:4,n:"Jeans Dirty 2",p:89,c:"#9a9a9a",m:meas(100,38)},
+{id:5,n:"Jacket Dirty",p:129,c:"#111111",m:meas(68,56)}
+];
+var caps=["Фото вещи","На модели 1","На модели 2","На модели 3"];
+var cur="EUR",cart={},ci=null,size=null,sl=0;
+var $=function(id){return document.getElementById(id)};
+var find=function(id){return items.filter(function(i){return i.id==id})[0]};
+try{var s=localStorage.getItem("cur");if(s&&rates[s]){cur=s;$("cur").value=s}
+var c=JSON.parse(localStorage.getItem("cart2")||"{}");if(c&&typeof c==="object")cart=c}catch(e){}
+function money(eur){var v=Math.round(eur*rates[cur]);var n=v.toString().replace(/\B(?=(\d{3})+$)/g,"\u00a0");return cur==="UAH"?n+"\u00a0₴":sym[cur]+n}
+function scr(){return '<svg class="scr" viewBox="0 0 60 20" preserveAspectRatio="none" aria-hidden="true"><path d="M2 14 L56 4 L6 10 L58 12 L10 17 L54 8" fill="none" stroke="#d11" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/></svg>'}
+function priceHtml(i){return '<span class="old">'+money(i.o)+scr()+'</span><b class="new">'+money(i.p)+'</b>'}
+function save(){try{localStorage.setItem("cart2",JSON.stringify(cart))}catch(e){}}
+function renderGrid(){$("grid").innerHTML=items.map(function(i){return '<article class="card" data-id="'+i.id+'"><div class="img" data-id="'+i.id+'"><div class="shape" style="background:'+i.c+'"></div></div><div class="meta" data-id="'+i.id+'"><span>'+i.n+'</span><span>'+priceHtml(i)+'</span></div></article>'}).join("")}
+function cardId(e){var t=e.target.closest("[data-id]");return t&&t.getAttribute("data-id")}
+$("grid").onclick=function(e){var id=cardId(e);if(id)openPv(id)};
+
+/* product view */
+function openPv(id){ci=find(id);size=null;sl=0;$("pn").textContent=ci.n;$("pp").innerHTML=priceHtml(ci);$("pnote").textContent="";
+ $("trk").innerHTML=caps.map(function(c,k){return '<div class="sl"><div class="shape" style="background:'+(k?'#f2f2f2':ci.c)+'"></div>'+c+'</div>'}).join("");
+ $("dts").innerHTML=caps.map(function(c,k){return '<i data-k="'+k+'"></i>'}).join("");
+ $("szs").innerHTML=ci.m.map(function(r){return '<button class="sz" aria-pressed="false">'+r[0]+'</button>'}).join("");
+ $("tbl").innerHTML='<tr><th>Размер</th><th>Длина</th><th>Ширина</th></tr>'+ci.m.map(function(r){return '<tr><td>'+r[0]+'</td><td>'+r[1]+'</td><td>'+r[2]+'</td></tr>'}).join("");
+ $("tw").style.display="none";go(0);$("pv").classList.add("on");$("pv").scrollTop=0}
+function go(k){sl=(k+caps.length)%caps.length;$("trk").style.transform="translateX(-"+sl*100+"%)";[].forEach.call($("dts").children,function(d,i){d.classList.toggle("on",i===sl)})}
+$("pl").onclick=function(){go(sl-1)};$("pr").onclick=function(){go(sl+1)};
+$("dts").onclick=function(e){var k=e.target.getAttribute("data-k");if(k!==null)go(+k)};
+var sx=0;$("trk").ontouchstart=function(e){sx=e.touches[0].clientX};$("trk").ontouchend=function(e){var d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>40)go(sl+(d<0?1:-1))};
+$("szs").onclick=function(e){if(e.target.className!=="sz")return;size=e.target.textContent;[].forEach.call($("szs").children,function(b){b.setAttribute("aria-pressed",b.textContent===size)});$("pnote").textContent="";$("tw").style.display="";[].forEach.call($("tbl").rows,function(r,i){r.classList.toggle("sel",i>0&&r.cells[0].textContent===size)})};
+$("pvx").onclick=function(){$("pv").classList.remove("on")};
+$("addc").onclick=function(){if(!size){$("pnote").textContent="Выберите размер";return}
+ var k=ci.id+"_"+size;cart[k]=(cart[k]||0)+1;save();renderCart();$("pv").classList.remove("on");showCart()};
+
+/* cart */
+function lines(){return Object.keys(cart).map(function(k){var p=k.split("_");return {k:k,i:find(p[0]),s:p[1],q:cart[k]}}).filter(function(l){return l.i})}
+function renderCart(){var n=0,sum=0,h="";lines().forEach(function(l){n+=l.q;sum+=l.q*l.i.p;
+ h+='<div class="row"><div class="th" style="background:'+l.i.c+'"></div><div class="inf">'+l.i.n+'<small>Размер '+l.s+' · '+money(l.i.p)+'</small><div class="qty"><button data-m="'+l.k+'" aria-label="Меньше">−</button><span>'+l.q+'</span><button data-p="'+l.k+'" aria-label="Больше">+</button></div></div><button class="rm" data-r="'+l.k+'">Удалить</button></div>'});
+ $("list").innerHTML=h||'<div class="empty">Корзина пуста</div>';$("cnt").textContent=n;$("sum").textContent=money(sum);$("buy").disabled=!n;$("foot").style.display="";$("dt").textContent="Корзина"}
+function showCart(){renderCart();$("dr").classList.add("on");$("ov").classList.add("on")}
+function hideCart(){$("dr").classList.remove("on");$("ov").classList.remove("on")}
+function chg(k,d){cart[k]=(cart[k]||0)+d;if(cart[k]<=0)delete cart[k];save();renderCart()}
+$("list").onclick=function(e){var t=e.target,m=t.getAttribute("data-m"),p=t.getAttribute("data-p"),r=t.getAttribute("data-r");
+ if(m)chg(m,-1);else if(p)chg(p,1);else if(r){delete cart[r];save();renderCart()}};
+$("open").onclick=showCart;$("close").onclick=$("ov").onclick=hideCart;
+$("cur").onchange=function(){cur=this.value;try{localStorage.setItem("cur",cur)}catch(e){}renderGrid();renderCart();if($("pv").classList.contains("on"))$("pp").innerHTML=priceHtml(ci)};
+
+/* checkout */
+var CT=[["Украина",380,9,9,/^\d{5}$/],["Польша",48,9,9,/^\d{2}-\d{3}$/],["Литва",370,8,8,/^(LT-?)?\d{5}$/i],["Латвия",371,8,8,/^(LV-?)?\d{4}$/i],["Эстония",372,7,8,/^\d{5}$/],["Чехия",420,9,9,/^\d{3} ?\d{2}$/],["Словакия",421,9,9,/^\d{3} ?\d{2}$/],["Венгрия",36,9,9,/^\d{4}$/],["Германия",49,10,11,/^\d{5}$/],["Италия",39,9,10,/^\d{5}$/],["Испания",34,9,9,/^\d{5}$/],["Румыния",40,9,9,/^\d{6}$/],["Молдова",373,8,8,/^(MD-?)?\d{4}$/i],["Австрия",43,10,11,/^\d{4}$/],["Франция",33,9,9,/^\d{5}$/],["Нидерланды",31,9,9,/^\d{4} ?[A-Za-z]{2}$/],["Великобритания",44,10,10,/^[A-Za-z]{1,2}\d[A-Za-z\d]? ?\d[A-Za-z]{2}$/]];
+var CITY={"Украина":["Київ","Харків","Одеса","Дніпро","Львів","Запоріжжя","Кривий Ріг","Миколаїв","Вінниця","Полтава","Чернігів","Черкаси","Житомир","Суми","Хмельницький","Рівне","Івано-Франківськ","Тернопіль","Луцьк","Ужгород","Чернівці","Кропивницький","Біла Церква","Кременчук"],"Польша":["Варшава","Краков","Вроцлав","Гданьск","Познань","Лодзь","Катовице","Люблин","Щецин"],"Литва":["Вильнюс","Каунас","Клайпеда","Шяуляй","Паневежис"],"Латвия":["Рига","Даугавпилс","Лиепая","Елгава","Юрмала"],"Эстония":["Таллин","Тарту","Нарва","Пярну"],"Чехия":["Прага","Брно","Острава","Пльзень","Либерец"],"Словакия":["Братислава","Кошице","Прешов","Жилина","Нитра"],"Венгрия":["Будапешт","Дебрецен","Сегед","Мишкольц","Печ"],"Германия":["Берлин","Гамбург","Мюнхен","Кёльн","Франкфурт-на-Майне","Штутгарт","Дюссельдорф","Лейпциг","Дрезден"],"Италия":["Рим","Милан","Неаполь","Турин","Болонья","Флоренция","Генуя"],"Испания":["Мадрид","Барселона","Валенсия","Севилья","Сарагоса","Малага"],"Румыния":["Бухарест","Клуж-Напока","Тимишоара","Яссы","Констанца"],"Молдова":["Кишинёв","Бельцы","Кахул","Орхей"],"Австрия":["Вена","Грац","Линц","Зальцбург","Инсбрук"],"Франция":["Париж","Марсель","Лион","Тулуза","Ницца","Лилль"],"Нидерланды":["Амстердам","Роттердам","Гаага","Утрехт","Эйндховен"],"Великобритания":["Лондон","Манчестер","Бирмингем","Лидс","Глазго","Ливерпуль","Эдинбург"]};
+var cc=function(){return CT.filter(function(c){return c[0]===$("fc").value})[0]};
+var VOW="aeiouyаеёиоуыэюяіїє'’ʼ",CYR=/[А-Яа-яЁёІіЇїЄєҐґ]/,LAT=/[A-Za-z]/;
+function nameOk(v){
+ if(v.length<2||v.length>30)return false;
+ if(!/^[A-Za-zА-Яа-яЁёІіЇїЄєҐґ'’ʼ\- ]+$/.test(v))return false;
+ var w=v.split(/[ \-]+/);
+ for(var k=0;k<w.length;k++){var x=w[k];if(!x)return false;
+  var f=x.charAt(0);if(f!==f.toUpperCase()||f===f.toLowerCase())return false;
+  if(CYR.test(x)&&LAT.test(x))return false;
+  if(x.length>2&&!new RegExp("["+VOW+"]","i").test(x))return false;
+  if(/(.)\1\1/i.test(x))return false;
+  if(new RegExp("[^"+VOW+"]{5}","i").test(x))return false}
+ return true}
+function err(id,m){var e=$(id),b=e.parentNode.classList.contains("ph")?e.parentNode:e;b.classList.toggle("err",!!m);$("e_"+id).textContent=m||""}
+function cleanText(e){e.value=e.value.replace(/[^A-Za-zА-Яа-яЁёІіЇїЄєҐґ'’ʼ\- ]/g,"")}
+function phone(){var c=cc(),mx=c[3],code=String(c[1]),d=$("f1").value.replace(/\D/g,"");
+ if(d.indexOf(code)===0&&d.length>mx)d=d.slice(code.length);
+ if(d.charAt(0)==="0")d=d.slice(1);
+ var over=d.length>mx;if(over)d=d.slice(0,mx);
+ $("f1").value=d;err("f1",over?(c[2]===mx?"Для этой страны номер содержит "+mx+" цифр, больше писать нельзя":"Для этой страны не больше "+mx+" цифр, больше писать нельзя"):"")}
+var dmv="";
+function setDm(){var ua=$("fc").value==="Украина",o=ua?["Отделение","Почтомат"]:["Отделение","Почтомат","Курьер"];
+ if(o.indexOf(dmv)<0)dmv="";
+ $("dm").innerHTML=o.map(function(x){return '<button class="sz" aria-pressed="'+(x===dmv)+'" data-v="'+x+'">'+x+'</button>'}).join("");
+ $("l5").textContent=dmv==="Отделение"?"Номер или адрес отделения":dmv==="Почтомат"?"Номер или адрес почтомата":dmv==="Курьер"?"Адрес (улица, дом, квартира)":"Выберите способ доставки и укажите номер или адрес"}
+function setC(){var ua=$("fc").value==="Украина";
+ [].forEach.call(document.querySelectorAll(".intl"),function(d){d.style.display=ua?"none":""});
+ setDm();
+ $("pre").textContent="+"+cc()[1];phone();
+ $("cl").innerHTML=(CITY[$("fc").value]||[]).map(function(c){return '<option value="'+c+'">'}).join("");$("f4").value="";err("f4","")}
+$("buy").onclick=function(){
+ $("dt").textContent="Оформление";$("foot").style.display="none";
+ $("list").innerHTML='<label>Выберите страну</label><select class="f" id="fc">'+CT.map(function(c){return '<option value="'+c[0]+'">'+c[0]+'</option>'}).join("")+'</select>'+
+ '<label>Номер телефона</label><div class="ph"><span id="pre">+380</span><input id="f1" type="tel" inputmode="numeric" autocomplete="tel-national"></div><div class="em" id="e_f1"></div>'+
+ '<label>Фамилия</label><input id="f2" autocomplete="family-name"><div class="hint">Пишите обязательно с большой буквы</div><div class="em" id="e_f2"></div>'+
+ '<label>Имя</label><input id="f3" autocomplete="given-name"><div class="hint">Пишите обязательно с большой буквы</div><div class="em" id="e_f3"></div>'+
+ '<label>Ваш @username в Telegram <span style="color:#c00">(обязательно)</span></label><input id="ft" placeholder="@username" autocapitalize="off" autocomplete="off" maxlength="33"><div class="em" id="e_ft"></div>'+
+ '<div class="intl" style="display:none"><label>Email (для отслеживания заказа)</label><input id="fe" type="email" autocomplete="email"><div class="em" id="e_fe"></div></div>'+
+ '<label>Город или село</label><input id="f4" list="cl" autocomplete="off" placeholder="Выберите из списка или напишите свой"><datalist id="cl"></datalist><div class="em" id="e_f4"></div>'+
+ '<div class="intl" style="display:none"><label>Почтовый индекс</label><input id="fz" autocomplete="postal-code"><div class="em" id="e_fz"></div></div>'+
+ '<label>Способ доставки</label><div class="sizes" id="dm"></div><div class="hint">Доставка осуществляется исключительно Новой почтой</div><div class="em" id="e_dm"></div>'+
+ '<label id="l5">Номер или адрес отделения</label><input id="f5"><div class="em" id="e_f5"></div>'+
+ '<button class="btn" id="send">Оформить заказ</button><button class="btn alt" id="back">Назад в корзину</button>';
+ dmv="";$("fc").onchange=setC;$("f1").oninput=phone;
+ $("dm").onclick=function(e){var v=e.target.getAttribute("data-v");if(v){dmv=v;err("dm","");setDm()}};
+ ["f2","f3","f4"].forEach(function(id){$(id).oninput=function(){cleanText(this);err(id,"")}});
+ $("ft").oninput=function(){var v=this.value.replace(/[^A-Za-z0-9_]/g,"");this.value=v?"@"+v:"";err("ft","")};
+ $("back").onclick=renderCart;$("send").onclick=submit;setC()};
+function submit(){var c=cc(),ua=c[0]==="Украина",ok=true;
+ function bad(id,m){err(id,m);ok=false}
+ var d=$("f1").value;if(d.length<c[2]||d.length>c[3])bad("f1","Введите номер полностью: "+(c[2]===c[3]?c[2]+" цифр":c[2]+"–"+c[3]+" цифр")+" после +"+c[1]);else err("f1","");
+ ["f2","f3"].forEach(function(id){var v=$(id).value.trim();if(!nameOk(v))bad(id,"Только буквы, настоящее "+(id==="f2"?"фамилия":"имя")+", с большой буквы");else err(id,"")});
+ var city=$("f4").value.trim();if(!/[A-Za-zА-Яа-яІіЇїЄєҐґ]{2}/.test(city))bad("f4","Укажите город");else err("f4","");
+ var tg=$("ft").value.trim();if(!/^@[A-Za-z][A-Za-z0-9_]{4,31}$/.test(tg))bad("ft","Введите ваш @username из Telegram (от 5 символов, латиницей)");else err("ft","");
+ if(!dmv)bad("dm","Выберите: отделение или почтомат");else err("dm","");
+ if(!$("f5").value.trim())bad("f5","Заполните это поле");else err("f5","");
+ if(!ua){if(!/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test($("fe").value.trim()))bad("fe","Введите правильный email");else err("fe","");
+  if(!c[4].test($("fz").value.trim()))bad("fz","Неверный индекс для этой страны");else err("fz","")}
+ if(!ok)return;
+ var sum=0,t="Новый заказ GLEKEMIA\n\n";lines().forEach(function(l){sum+=l.q*l.i.p;t+=l.i.n+" · "+l.s+" · "+l.q+" шт · "+money(l.i.p*l.q)+"\n"});
+ t+="\nИтого: "+money(sum)+" ("+cur+")\n\nСтрана: "+c[0]+"\nТелефон: +"+c[1]+d+"\nФамилия: "+$("f2").value.trim()+"\nИмя: "+$("f3").value.trim()+"\nTelegram: "+tg+(ua?"":"\nEmail: "+$("fe").value.trim())+"\nГород: "+city+(ua?"":"\nПочтовый индекс: "+$("fz").value.trim())+"\nСпособ доставки (Новая почта): "+dmv+"\n"+$("l5").textContent+": "+$("f5").value.trim();
+ var url="https://t.me/"+TG+"?text="+encodeURIComponent(t);
+ if(ORDER_URL){$("send").disabled=true;$("send").textContent="Отправляем…";
+  fetch(ORDER_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({text:t})}).then(function(r){if(!r.ok)throw 0;done("")}).catch(function(){$("send").disabled=false;$("send").textContent="Оформить заказ";err("f5","Не удалось отправить заказ, попробуйте ещё раз")})}
+ else{window.open(url,"_blank");done(url)}}
+function done(url){
+ $("dt").textContent="Заказ оформлен";
+ $("list").innerHTML='<div class="note" style="text-align:left;margin:0 0 14px;font-size:15px;color:var(--fg)">Спасибо за заказ! Наш менеджер свяжется с вами в Telegram для оплаты :)</div>'+(url?'<div class="note" style="text-align:left;margin:0 0 14px">Чтобы мы получили заказ, нажмите «Отправить» в открывшемся Telegram.</div><a class="btn alt" target="_blank" rel="noopener" href="'+url+'">Открыть Telegram снова</a>':'')+'<button class="btn" id="clr">Готово</button>';
+ $("clr").onclick=function(){cart={};save();renderCart();hideCart()}}
+(function(){var el=$("bf"),t=el.textContent,s=7;el.textContent="";function r(){s=(s*9301+49297)%233280;return s/233280-.5}t.split("").forEach(function(ch){var i=document.createElement("i");i.textContent=ch===" "?"\u00a0":ch;i.style.transform="translateY("+(r()*16).toFixed(1)+"px) rotate("+(r()*36).toFixed(1)+"deg) scale("+(1+r()*.4).toFixed(2)+")";i.style.marginRight=(r()*6).toFixed(1)+"px";el.appendChild(i)})})();
+renderGrid();renderCart();
+</script>
+</body>
+</html>
