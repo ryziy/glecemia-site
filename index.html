@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>GLEKEMIA — одежда бренда, каталог</title>
-<meta name="description" content="GLEKEMIA — бренд одежды. Каталог, доставка Новой почтой по Украине и в страны Европы.">
+<title>GLEKEMIA — clothing brand</title>
+<meta name="description" content="GLEKEMIA — clothing brand. Catalog, delivery by Nova Poshta across Ukraine and Europe.">
 <link rel="canonical" href="https://glecemia.com/">
 <meta property="og:title" content="GLEKEMIA">
-<meta property="og:description" content="Бренд одежды GLEKEMIA. Первая коллекция.">
+<meta property="og:description" content="GLEKEMIA clothing brand. First collection.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://glecemia.com/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%91%95%3C/text%3E%3C/svg%3E">
@@ -19,25 +19,34 @@ html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--fg);font-family:"Inter",-apple-system,"Helvetica Neue",Arial,sans-serif;line-height:1.5}
 button,select,input{font:inherit;color:var(--fg)}
 .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-header{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:22px 0;border-bottom:1px solid var(--line)}
-.logo{font-weight:600;letter-spacing:.3em;font-size:18px;grid-column:2}
-.right{grid-column:3;justify-self:end;display:flex;gap:8px;align-items:center}
-.cur,.cartbtn{border:1px solid var(--line);background:#fff;border-radius:8px;padding:6px 10px;font-size:13px;cursor:pointer}
+header{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:18px 0;border-bottom:1px solid var(--line)}
+.logo{font-weight:600;letter-spacing:.3em;font-size:18px;grid-column:2;text-align:center}
+.left{grid-column:1;justify-self:start;display:flex;flex-direction:column;gap:3px}
+.lab{font-size:9px;color:var(--mute);letter-spacing:.08em;text-transform:uppercase}
+.sel{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 6px;font-size:12px;width:104px;cursor:pointer}
+.right{grid-column:3;justify-self:end}
+.cartbtn{border:1px solid var(--line);background:#fff;border-radius:8px;padding:6px 10px;font-size:13px;cursor:pointer;white-space:nowrap}
 .hero{display:flex;justify-content:center;padding:48px 0 40px}
-.bfw{display:inline-flex;align-items:center;transform:rotate(-4deg)}
+.bfw{display:inline-flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:0 16px;transform:rotate(-4deg)}
 .bf{font-family:"Nothing You Could Do","Segoe Script","Bradley Hand",cursive;font-weight:400;font-size:clamp(40px,11vw,76px);line-height:1;color:#d11;white-space:nowrap}
 .bf i{display:inline-block;font-style:normal}
-
-
-.shop{display:inline-block;padding:9px 22px;border-radius:10px;border:1px solid rgba(0,0,0,.12);background:rgba(0,0,0,.05);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:var(--fg);font-size:13px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:28px 20px;padding-bottom:72px}
+.bf2{font-size:clamp(34px,9vw,62px);transform:rotate(5deg)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,250px));justify-content:center;gap:28px 24px;padding-bottom:72px}
 .card{cursor:pointer}
 .img{aspect-ratio:4/5;border:1px solid var(--line);border-radius:4px;display:flex;align-items:center;justify-content:center;transition:transform .3s}
 .card:hover .img{transform:translateY(-4px)}
 .shape{width:46%;height:52%;border-radius:6px 6px 14px 14px;border:1px solid rgba(0,0,0,.15)}
 .meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 10px;padding-top:12px;font-size:15px}
 .meta span:last-child{color:var(--mute);white-space:nowrap}
+.old{position:relative;display:inline-block;color:var(--mute);margin-right:8px}
+.scr{position:absolute;left:-4px;top:-2px;width:calc(100% + 8px);height:calc(100% + 4px);pointer-events:none;overflow:visible}
+.new{color:var(--fg);font-weight:500}
+.card.ltd .img{border-color:rgba(221,17,17,.45);box-shadow:0 0 16px 2px rgba(221,17,17,.22)}
+.card.sold .img{opacity:.45}
+.lim{margin-top:6px;font-size:12px;color:#c11;letter-spacing:.02em}
+.card.sold .lim{color:var(--mute)}
 footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--mute);font-size:14px;text-align:center}
+@media(max-width:560px){.wrap{padding:0 14px}.logo{font-size:14px;letter-spacing:.2em}.sel{width:92px;font-size:11px}.cartbtn{font-size:12px;padding:6px 8px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));justify-content:stretch;gap:20px 12px}.meta{font-size:13px}}
 .ov{position:fixed;inset:0;background:rgba(0,0,0,.3);opacity:0;pointer-events:none;transition:opacity .25s;z-index:20}
 .ov.on{opacity:1;pointer-events:auto}
 .x{border:0;background:none;font-size:26px;cursor:pointer;line-height:1}
@@ -61,6 +70,11 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--mute);fo
 label{display:block;font-size:12px;color:var(--mute);margin:12px 0 4px}
 input,select.f{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;background:#fff;font-size:15px}
 .err{border-color:#c00}
+.em{color:#c00;font-size:12px;margin-top:4px}
+.hint{font-size:12px;color:var(--mute);margin-top:4px}
+.ph{display:flex;align-items:center;border:1px solid var(--line);border-radius:8px;background:#fff}
+.ph span{padding-left:10px;color:var(--mute);white-space:nowrap}
+.ph input{border:0;background:none;padding-left:6px}
 .pv{position:fixed;inset:0;z-index:21;background:#fff;overflow-y:auto;transform:translateY(100%);transition:transform .3s;visibility:hidden;padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
 .pv.on{transform:none;visibility:visible}
 .pvh{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:2}
@@ -76,6 +90,7 @@ input,select.f{width:100%;padding:10px;border:1px solid var(--line);border-radiu
 .dts i{width:8px;height:8px;border-radius:50%;border:1px solid var(--fg);cursor:pointer}
 .dts i.on{background:var(--fg)}
 .pvi h2{font-weight:400;font-size:24px;margin:0 0 4px}
+.comp{font-size:13px;color:var(--mute);margin:10px 0 0}
 .sizes{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 6px}
 .sz{min-width:48px;padding:10px 12px;border:1px solid var(--line);background:#fff;border-radius:8px;cursor:pointer}
 .sz[aria-pressed="true"]{background:var(--fg);color:#fff;border-color:var(--fg)}
@@ -83,114 +98,127 @@ table{width:100%;border-collapse:collapse;font-size:14px;margin-top:8px}
 th,td{padding:9px 8px;border-bottom:1px solid var(--line);text-align:center}
 th{color:var(--mute);font-weight:400}
 tr.sel td{background:#f2f2f2;font-weight:600}
-.old{position:relative;display:inline-block;color:var(--mute);margin-right:8px}
-.scr{position:absolute;left:-4px;top:-2px;width:calc(100% + 8px);height:calc(100% + 4px);pointer-events:none;overflow:visible}
-.new{color:var(--fg);font-weight:500}
-.em{color:#c00;font-size:12px;margin-top:4px}
-.hint{font-size:12px;color:var(--mute);margin-top:4px}
-.ph{display:flex;align-items:center;border:1px solid var(--line);border-radius:8px;background:#fff}
-.ph span{padding-left:10px;color:var(--mute);white-space:nowrap}
-.ph input{border:0;background:none;padding-left:6px}
-.msg{background:#f6f6f6;border-radius:8px;padding:12px;font-size:13px;white-space:pre-wrap;margin-top:10px;max-height:160px;overflow:auto}
 </style>
 </head>
 <body>
 <div class="wrap">
-<header><div class="logo">GLEKEMIA</div>
-<div class="right"><select class="cur" id="cur" aria-label="Валюта"><option value="EUR">€ EUR</option><option value="USD">$ USD</option><option value="UAH">₴ UAH</option></select>
-<button class="cartbtn" id="open">Корзина (<span id="cnt">0</span>)</button></div></header>
-<section class="hero"><div class="bfw"><div class="bf" id="bf" aria-label="Black Friday">Black Friday</div></div></section>
+<header>
+<div class="left"><span class="lab" data-t="lang"></span><select class="sel" id="lang" aria-label="Language"></select><select class="sel" id="cur" aria-label="Currency"><option value="EUR">€ EUR</option><option value="USD">$ USD</option><option value="UAH">₴ UAH</option><option value="PLN">zł PLN</option></select></div>
+<div class="logo">GLEKEMIA</div>
+<div class="right"><button class="cartbtn" id="open"><span data-t="cart"></span> (<span id="cnt">0</span>)</button></div>
+</header>
+<section class="hero"><div class="bfw"><div class="bf" id="bf" aria-label="Black Friday">Black Friday</div><div class="bf bf2" aria-label="-20%">-20%</div></div></section>
 <div class="grid" id="grid"></div>
 <footer>© 2026 GLEKEMIA</footer>
 </div>
 
-<section class="pv" id="pv" aria-label="Товар">
-<div class="pvh"><span style="letter-spacing:.3em;font-weight:600;font-size:14px">GLEKEMIA</span><button class="x" id="pvx" aria-label="Закрыть">×</button></div>
+<section class="pv" id="pv">
+<div class="pvh"><span style="letter-spacing:.3em;font-weight:600;font-size:14px">GLEKEMIA</span><button class="x" id="pvx" aria-label="Close">×</button></div>
 <div class="pvb">
-<div><div class="gal"><div class="trk" id="trk"></div><button class="ar l" id="pl" aria-label="Назад">‹</button><button class="ar r" id="pr" aria-label="Вперёд">›</button></div><div class="dts" id="dts"></div></div>
-<div class="pvi"><h2 id="pn"></h2><div id="pp" style="color:var(--mute)"></div>
-<label>Размер</label><div class="sizes" id="szs"></div><div id="tw" style="display:none"><label>Таблица замеров, см</label><table id="tbl"></table></div>
-<button class="btn" id="addc">Добавить в корзину</button><div class="note" id="pnote"></div></div>
-
+<div><div class="gal"><div class="trk" id="trk"></div><button class="ar l" id="pl" aria-label="Prev">‹</button><button class="ar r" id="pr" aria-label="Next">›</button></div><div class="dts" id="dts"></div></div>
+<div class="pvi"><h2 id="pn"></h2><div id="pp" style="color:var(--mute)"></div><div class="comp" data-t="comp"></div>
+<label data-t="size"></label><div class="sizes" id="szs"></div>
+<div id="tw" style="display:none"><label data-t="chart"></label><table id="tbl"></table></div>
+<button class="btn" id="addc" data-t="add"></button><div class="note" id="pnote"></div></div>
 </div></section>
 
 <div class="ov" id="ov"></div>
-<aside class="drawer" id="dr" aria-label="Корзина">
-<div class="dh"><span id="dt">Корзина</span><button class="x" id="close" aria-label="Закрыть">×</button></div>
+<aside class="drawer" id="dr">
+<div class="dh"><span id="dt"></span><button class="x" id="close" aria-label="Close">×</button></div>
 <div class="list" id="list"></div>
-<div id="foot"><div class="tot"><span>Итого</span><span id="sum"></span></div><button class="btn" id="buy">Оформить заказ</button></div>
+<div id="foot"><div class="tot"><span data-t="total"></span><span id="sum"></span></div><button class="btn" id="buy" data-t="checkout"></button></div>
 </aside>
 
 <script>
-var ORDER_URL="/api/order",TG="glecemia",EMAIL="contact.glecemia@gmail.com";
-var EU=["Польша","Литва","Латвия","Эстония","Чехия","Словакия","Венгрия","Германия","Италия","Испания","Румыния","Молдова","Австрия","Франция","Нидерланды","Великобритания"];
-var rates={EUR:1,USD:49.49/45.12,UAH:49.49},sym={EUR:"€",USD:"$"};
-var SZ=["XS","S","M","L","XL"];
+var ORDER_URL="/api/order",TG="glecemia";
+var LM=[{id:"en",f:"🇬🇧",n:"English",l:"en",c:"EUR"},{id:"us",f:"🇺🇸",n:"English US",l:"en",c:"USD"},{id:"uk",f:"🇺🇦",n:"Українська",l:"uk",c:"UAH"},{id:"ru",f:"🌐",n:"Русский",l:"ru",c:"UAH"},{id:"fr",f:"🇫🇷",n:"Français",l:"fr",c:"EUR"},{id:"pl",f:"🇵🇱",n:"Polski",l:"pl",c:"PLN"},{id:"de",f:"🇩🇪",n:"Deutsch",l:"de",c:"EUR"}];
+var K="lang,cart,total,checkout,empty,add,size,chart,len,wid,pick,remove,comp,chkT,country,phone,last,first,caps,tg,req,email,city,cityPh,zip,dm,np,branch,locker,courier,l5b,l5l,l5c,l5n,back,place,sending,eMax,eFull,eName,eCity,eFill,eMail,eZip,eTg,eDm,eSend,doneT,thanks,tgnote,again,ok,photo,model,left,sold".split(",");
+var L={
+en:["Language","Cart","Total","Checkout","Your cart is empty","Add to cart","Size","Size chart, cm","Length","Width","Please choose a size","Remove","Composition: 90% cotton, 10% elastane","Checkout","Select country","Phone number","Last name","First name","Always start with a capital letter","Your Telegram @username","(required)","Email (for order tracking)","City or village","Choose from the list or type your own","Postal code","Delivery method","Delivery is made exclusively by Nova Poshta","Branch","Parcel locker","Courier","Branch number or address","Parcel locker number or address","Address (street, house, apartment)","Choose a delivery method and enter the number or address","Back to cart","Place order","Sending…","For this country the number can have at most {n} digits, no more can be entered","Enter the full number: {r} digits after +{c}","Letters only, a real name, starting with a capital letter","Enter your city","Fill in this field","Enter a valid email","Invalid postal code for this country","Enter your Telegram @username (5+ characters, Latin letters)","Choose: branch or parcel locker","Could not send the order, please try again","Order placed","Thank you for your order! Our manager will contact you on Telegram for payment :)","To make sure we receive your order, press “Send” in the opened Telegram.","Open Telegram again","Done","Product photo","On model {n}","Only {n} left","Sold out"],
+uk:["Мова","Кошик","Разом","Оформити замовлення","Ваш кошик порожній","Додати в кошик","Розмір","Таблиця розмірів, см","Довжина","Ширина","Оберіть розмір","Видалити","Склад: 90% бавовна, 10% еластан","Оформлення","Оберіть країну","Номер телефону","Прізвище","Ім’я","Пишіть обов’язково з великої літери","Ваш @username у Telegram","(обов’язково)","Email (для відстеження замовлення)","Місто або село","Оберіть зі списку або напишіть своє","Поштовий індекс","Спосіб доставки","Доставка здійснюється виключно Новою поштою","Відділення","Поштомат","Кур’єр","Номер або адреса відділення","Номер або адреса поштомату","Адреса (вулиця, будинок, квартира)","Оберіть спосіб доставки та вкажіть номер або адресу","Назад до кошика","Оформити замовлення","Надсилаємо…","Для цієї країни номер містить не більше {n} цифр, більше писати не можна","Введіть номер повністю: {r} цифр після +{c}","Лише літери, справжнє ім’я, з великої літери","Вкажіть місто","Заповніть це поле","Введіть правильний email","Невірний індекс для цієї країни","Введіть ваш @username у Telegram (від 5 символів, латиницею)","Оберіть: відділення чи поштомат","Не вдалося надіслати замовлення, спробуйте ще раз","Замовлення оформлено","Дякуємо за замовлення! Наш менеджер зв’яжеться з вами в Telegram для оплати :)","Щоб ми отримали замовлення, натисніть «Надіслати» у Telegram, що відкрився.","Відкрити Telegram ще раз","Готово","Фото речі","На моделі {n}","Залишилось лише {n}","Розпродано"],
+ru:["Язык","Корзина","Итого","Оформить заказ","Корзина пуста","Добавить в корзину","Размер","Таблица замеров, см","Длина","Ширина","Выберите размер","Удалить","Состав: 90% хлопок, 10% эластан","Оформление","Выберите страну","Номер телефона","Фамилия","Имя","Пишите обязательно с большой буквы","Ваш @username в Telegram","(обязательно)","Email (для отслеживания заказа)","Город или село","Выберите из списка или напишите свой","Почтовый индекс","Способ доставки","Доставка осуществляется исключительно Новой почтой","Отделение","Почтомат","Курьер","Номер или адрес отделения","Номер или адрес почтомата","Адрес (улица, дом, квартира)","Выберите способ доставки и укажите номер или адрес","Назад в корзину","Оформить заказ","Отправляем…","Для этой страны номер содержит не больше {n} цифр, больше писать нельзя","Введите номер полностью: {r} цифр после +{c}","Только буквы, настоящее имя, с большой буквы","Укажите город","Заполните это поле","Введите правильный email","Неверный индекс для этой страны","Введите ваш @username из Telegram (от 5 символов, латиницей)","Выберите: отделение или почтомат","Не удалось отправить заказ, попробуйте ещё раз","Заказ оформлен","Спасибо за заказ! Наш менеджер свяжется с вами в Telegram для оплаты :)","Чтобы мы получили заказ, нажмите «Отправить» в открывшемся Telegram.","Открыть Telegram снова","Готово","Фото вещи","На модели {n}","Осталось всего {n}","Распродано"],
+fr:["Langue","Panier","Total","Commander","Votre panier est vide","Ajouter au panier","Taille","Guide des tailles, cm","Longueur","Largeur","Veuillez choisir une taille","Supprimer","Composition : 90 % coton, 10 % élasthanne","Commande","Choisissez le pays","Numéro de téléphone","Nom","Prénom","Commencez toujours par une majuscule","Votre @username Telegram","(obligatoire)","E-mail (pour le suivi de commande)","Ville ou village","Choisissez dans la liste ou saisissez la vôtre","Code postal","Mode de livraison","La livraison est effectuée exclusivement par Nova Poshta","Agence","Consigne automatique","Coursier","Numéro ou adresse de l’agence","Numéro ou adresse de la consigne","Adresse (rue, numéro, appartement)","Choisissez un mode de livraison et indiquez le numéro ou l’adresse","Retour au panier","Passer la commande","Envoi…","Pour ce pays, le numéro ne peut pas dépasser {n} chiffres","Saisissez le numéro complet : {r} chiffres après +{c}","Lettres uniquement, un vrai nom, commençant par une majuscule","Indiquez votre ville","Remplissez ce champ","Saisissez un e-mail valide","Code postal invalide pour ce pays","Saisissez votre @username Telegram (5 caractères min., lettres latines)","Choisissez : agence ou consigne","Impossible d’envoyer la commande, réessayez","Commande passée","Merci pour votre commande ! Notre responsable vous contactera sur Telegram pour le paiement :)","Pour que nous recevions votre commande, appuyez sur « Envoyer » dans Telegram.","Rouvrir Telegram","Terminé","Photo du produit","Sur modèle {n}","Plus que {n}","Épuisé"],
+pl:["Język","Koszyk","Razem","Do kasy","Twój koszyk jest pusty","Dodaj do koszyka","Rozmiar","Tabela rozmiarów, cm","Długość","Szerokość","Wybierz rozmiar","Usuń","Skład: 90% bawełna, 10% elastan","Zamówienie","Wybierz kraj","Numer telefonu","Nazwisko","Imię","Zawsze pisz wielką literą","Twój @username w Telegramie","(wymagane)","E-mail (do śledzenia zamówienia)","Miasto lub wieś","Wybierz z listy lub wpisz własne","Kod pocztowy","Sposób dostawy","Dostawa wyłącznie przez Nova Poshta","Oddział","Paczkomat","Kurier","Numer lub adres oddziału","Numer lub adres paczkomatu","Adres (ulica, dom, mieszkanie)","Wybierz sposób dostawy i podaj numer lub adres","Wróć do koszyka","Złóż zamówienie","Wysyłanie…","Dla tego kraju numer ma maksymalnie {n} cyfr, więcej wpisać nie można","Wpisz pełny numer: {r} cyfr po +{c}","Tylko litery, prawdziwe imię, wielką literą","Podaj miasto","Wypełnij to pole","Podaj poprawny e-mail","Nieprawidłowy kod pocztowy dla tego kraju","Podaj swój @username w Telegramie (min. 5 znaków, litery łacińskie)","Wybierz: oddział lub paczkomat","Nie udało się wysłać zamówienia, spróbuj ponownie","Zamówienie złożone","Dziękujemy za zamówienie! Nasz menedżer skontaktuje się z Tobą na Telegramie w sprawie płatności :)","Aby zamówienie do nas dotarło, naciśnij „Wyślij” w otwartym Telegramie.","Otwórz Telegram ponownie","Gotowe","Zdjęcie produktu","Na modelu {n}","Zostało tylko {n}","Wyprzedane"],
+de:["Sprache","Warenkorb","Gesamt","Zur Kasse","Dein Warenkorb ist leer","In den Warenkorb","Größe","Größentabelle, cm","Länge","Breite","Bitte wähle eine Größe","Entfernen","Material: 90 % Baumwolle, 10 % Elasthan","Bestellung","Land wählen","Telefonnummer","Nachname","Vorname","Immer mit Großbuchstaben schreiben","Dein Telegram-@username","(erforderlich)","E-Mail (zur Sendungsverfolgung)","Stadt oder Dorf","Aus der Liste wählen oder eigenen Ort eingeben","Postleitzahl","Liefermethode","Die Lieferung erfolgt ausschließlich über Nova Poshta","Filiale","Paketautomat","Kurier","Nummer oder Adresse der Filiale","Nummer oder Adresse des Paketautomaten","Adresse (Straße, Hausnummer, Wohnung)","Liefermethode wählen und Nummer oder Adresse angeben","Zurück zum Warenkorb","Bestellung aufgeben","Wird gesendet…","Für dieses Land sind maximal {n} Ziffern erlaubt, mehr geht nicht","Vollständige Nummer eingeben: {r} Ziffern nach +{c}","Nur Buchstaben, ein echter Name, mit Großbuchstaben","Stadt angeben","Bitte dieses Feld ausfüllen","Gültige E-Mail eingeben","Ungültige Postleitzahl für dieses Land","Gib dein Telegram-@username ein (mind. 5 Zeichen, lateinische Buchstaben)","Wähle: Filiale oder Paketautomat","Bestellung konnte nicht gesendet werden, bitte erneut versuchen","Bestellung aufgegeben","Danke für deine Bestellung! Unser Manager meldet sich bei dir auf Telegram wegen der Zahlung :)","Damit wir die Bestellung erhalten, drücke in Telegram auf „Senden“.","Telegram erneut öffnen","Fertig","Produktfoto","Am Model {n}","Nur noch {n} übrig","Ausverkauft"]};
+var rates={EUR:1,USD:49.49/45.12,UAH:49.49,PLN:4.48},sym={EUR:"€",USD:"$"};
 var M2=[["S",69,49],["M",70,51],["L",72,53],["XL",74,54]];
-var meas=function(l,w){return SZ.map(function(s,i){return [s,l+i*2,w+i*2]})};
 var items=[
-{id:11,n:"Lifeline of love White",p:900/49.49,o:1100/49.49,c:"#ffffff",m:M2},
-{id:12,n:"Lifeline of love Black",p:900/49.49,o:1100/49.49,c:"#111111",m:M2}
+{id:11,n:"Lifeline of love White",p:880/49.49,o:1100/49.49,c:"#ffffff",m:M2},
+{id:12,n:"Lifeline of love Black",p:880/49.49,o:1100/49.49,c:"#111111",m:M2},
+{id:13,n:"Lifeline of love Blue (Limited edition)",p:1100/49.49,c:"#3f64c4",m:[["S",69,49],["L",72,53]],np:2,ltd:1}
 ];
-// Старые товары: после Black Friday вернуть в items
-var later=[
-{id:1,n:"Longsleeve Pain",p:39,c:"#ffffff",m:meas(64,50)},
-{id:2,n:"Hoodie Lindsay Lohan",p:79,c:"#111111",m:meas(66,54)},
-{id:3,n:"Pants Dirty",p:69,c:"#555555",m:meas(98,38)},
-{id:4,n:"Jeans Dirty 2",p:89,c:"#9a9a9a",m:meas(100,38)},
-{id:5,n:"Jacket Dirty",p:129,c:"#111111",m:meas(68,56)}
-];
-var caps=["Фото вещи","На модели 1","На модели 2","На модели 3"];
-var cur="EUR",cart={},ci=null,size=null,sl=0;
+var stock={13:3};
 var $=function(id){return document.getElementById(id)};
 var find=function(id){return items.filter(function(i){return i.id==id})[0]};
-try{var s=localStorage.getItem("cur");if(s&&rates[s]){cur=s;$("cur").value=s}
-var c=JSON.parse(localStorage.getItem("cart2")||"{}");if(c&&typeof c==="object")cart=c}catch(e){}
-function money(eur){var v=Math.round(eur*rates[cur]);var n=v.toString().replace(/\B(?=(\d{3})+$)/g,"\u00a0");return cur==="UAH"?n+"\u00a0₴":sym[cur]+n}
+var lang="en",cur="EUR",gn=4,cart={},ci=null,size=null,sl=0,dmv="",mode="cart";
+var lm=function(){return LM.filter(function(x){return x.id===lang})[0]};
+function t(k,v){var a=L[lm().l]||L.en,i=K.indexOf(k),s=a[i]||L.en[i]||k;if(v)for(var x in v)s=s.replace("{"+x+"}",v[x]);return s}
+try{var s1=localStorage.getItem("lang2");if(LM.some(function(x){return x.id===s1}))lang=s1;
+cur=lm().c;var s2=localStorage.getItem("cur2");if(s2&&rates[s2])cur=s2;
+var c0=JSON.parse(localStorage.getItem("cart2")||"{}");if(c0&&typeof c0==="object")cart=c0}catch(e){}
+function money(eur){var v=Math.round(eur*rates[cur]);var n=v.toString().replace(/\B(?=(\d{3})+$)/g,"\u00a0");return cur==="UAH"?n+"\u00a0₴":cur==="PLN"?n+"\u00a0zł":sym[cur]+n}
 function scr(){return '<svg class="scr" viewBox="0 0 60 20" preserveAspectRatio="none" aria-hidden="true"><path d="M2 14 L56 4 L6 10 L58 12 L10 17 L54 8" fill="none" stroke="#d11" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/></svg>'}
-function priceHtml(i){return '<span class="old">'+money(i.o)+scr()+'</span><b class="new">'+money(i.p)+'</b>'}
+function priceHtml(i){return (i.o?'<span class="old">'+money(i.o)+scr()+'</span>':'')+'<b class="new">'+money(i.p)+'</b>'}
+function cap(id){var v=stock[id];return v==null?1e9:v}
+function sold(i){return cap(i.id)<=0}
+function inCart(id){var n=0;Object.keys(cart).forEach(function(k){if(k.split("_")[0]==id)n+=cart[k]});return n}
+function light(){renderGrid();if($("pv").classList.contains("on"))buildPv()}
 function save(){try{localStorage.setItem("cart2",JSON.stringify(cart))}catch(e){}}
-function renderGrid(){$("grid").innerHTML=items.map(function(i){return '<article class="card" data-id="'+i.id+'"><div class="img" data-id="'+i.id+'"><div class="shape" style="background:'+i.c+'"></div></div><div class="meta" data-id="'+i.id+'"><span>'+i.n+'</span><span>'+priceHtml(i)+'</span></div></article>'}).join("")}
-function cardId(e){var t=e.target.closest("[data-id]");return t&&t.getAttribute("data-id")}
-$("grid").onclick=function(e){var id=cardId(e);if(id)openPv(id)};
 
-/* product view */
-function openPv(id){ci=find(id);size=null;sl=0;$("pn").textContent=ci.n;$("pp").innerHTML=priceHtml(ci);$("pnote").textContent="";
+/* static text + language */
+function applyStatic(){document.documentElement.lang=lm().l;
+ [].forEach.call(document.querySelectorAll("[data-t]"),function(e){e.textContent=t(e.getAttribute("data-t"))});
+ $("lang").innerHTML=LM.map(function(x){return '<option value="'+x.id+'">'+x.f+' '+x.n+'</option>'}).join("");
+ $("lang").value=lang;$("cur").value=cur}
+function refresh(){applyStatic();renderGrid();if($("pv").classList.contains("on"))buildPv();if(mode!=="done")renderCart()}
+$("lang").onchange=function(){lang=this.value;cur=lm().c;try{localStorage.setItem("lang2",lang);localStorage.setItem("cur2",cur)}catch(e){}refresh()};
+$("cur").onchange=function(){cur=this.value;try{localStorage.setItem("cur2",cur)}catch(e){}refresh()};
+
+/* grid + product */
+function renderGrid(){$("grid").innerHTML=items.map(function(i){var sd=sold(i),st=stock[i.id];return '<article class="card'+(i.ltd&&!sd?' ltd':'')+(sd?' sold':'')+'" data-id="'+i.id+'"><div class="img" data-id="'+i.id+'"><div class="shape" style="background:'+i.c+'"></div></div><div class="meta" data-id="'+i.id+'"><span>'+i.n+'</span><span>'+priceHtml(i)+'</span></div>'+(sd?'<div class="lim" data-id="'+i.id+'">'+t("sold")+'</div>':(i.ltd&&st!=null?'<div class="lim" data-id="'+i.id+'">'+t("left",{n:st})+'</div>':''))+'</article>'}).join("")}
+$("grid").onclick=function(e){var t0=e.target.closest("[data-id]");if(t0)openPv(t0.getAttribute("data-id"))};
+function openPv(id){ci=find(id);size=null;sl=0;$("pnote").textContent="";buildPv();$("pv").classList.add("on");$("pv").scrollTop=0}
+function buildPv(){$("pn").textContent=ci.n;$("pp").innerHTML=priceHtml(ci);
+ var caps=[t("photo"),t("model",{n:1}),t("model",{n:2}),t("model",{n:3})].slice(0,ci.np||4);gn=caps.length;
  $("trk").innerHTML=caps.map(function(c,k){return '<div class="sl"><div class="shape" style="background:'+(k?'#f2f2f2':ci.c)+'"></div>'+c+'</div>'}).join("");
  $("dts").innerHTML=caps.map(function(c,k){return '<i data-k="'+k+'"></i>'}).join("");
- $("szs").innerHTML=ci.m.map(function(r){return '<button class="sz" aria-pressed="false">'+r[0]+'</button>'}).join("");
- $("tbl").innerHTML='<tr><th>Размер</th><th>Длина</th><th>Ширина</th></tr>'+ci.m.map(function(r){return '<tr><td>'+r[0]+'</td><td>'+r[1]+'</td><td>'+r[2]+'</td></tr>'}).join("");
- $("tw").style.display="none";go(0);$("pv").classList.add("on");$("pv").scrollTop=0}
-function go(k){sl=(k+caps.length)%caps.length;$("trk").style.transform="translateX(-"+sl*100+"%)";[].forEach.call($("dts").children,function(d,i){d.classList.toggle("on",i===sl)})}
+ $("szs").innerHTML=ci.m.map(function(r){return '<button class="sz" aria-pressed="'+(r[0]===size)+'">'+r[0]+'</button>'}).join("");
+ $("tbl").innerHTML='<tr><th>'+t("size")+'</th><th>'+t("len")+'</th><th>'+t("wid")+'</th></tr>'+ci.m.map(function(r){return '<tr'+(r[0]===size?' class="sel"':'')+'><td>'+r[0]+'</td><td>'+r[1]+'</td><td>'+r[2]+'</td></tr>'}).join("");
+ $("tw").style.display=size?"":"none";var sd=sold(ci);$("addc").disabled=sd;$("addc").textContent=sd?t("sold"):t("add");go(sl)}
+function go(k){sl=(k+gn)%gn;$("trk").style.transform="translateX(-"+sl*100+"%)";[].forEach.call($("dts").children,function(d,i){d.classList.toggle("on",i===sl)})}
 $("pl").onclick=function(){go(sl-1)};$("pr").onclick=function(){go(sl+1)};
 $("dts").onclick=function(e){var k=e.target.getAttribute("data-k");if(k!==null)go(+k)};
 var sx=0;$("trk").ontouchstart=function(e){sx=e.touches[0].clientX};$("trk").ontouchend=function(e){var d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>40)go(sl+(d<0?1:-1))};
-$("szs").onclick=function(e){if(e.target.className!=="sz")return;size=e.target.textContent;[].forEach.call($("szs").children,function(b){b.setAttribute("aria-pressed",b.textContent===size)});$("pnote").textContent="";$("tw").style.display="";[].forEach.call($("tbl").rows,function(r,i){r.classList.toggle("sel",i>0&&r.cells[0].textContent===size)})};
+$("szs").onclick=function(e){if(e.target.className!=="sz")return;size=e.target.textContent;$("pnote").textContent="";buildPv()};
 $("pvx").onclick=function(){$("pv").classList.remove("on")};
-$("addc").onclick=function(){if(!size){$("pnote").textContent="Выберите размер";return}
- var k=ci.id+"_"+size;cart[k]=(cart[k]||0)+1;save();renderCart();$("pv").classList.remove("on");showCart()};
+$("addc").onclick=function(){if(!size){$("pnote").textContent=t("pick");return}
+ if(inCart(ci.id)>=cap(ci.id)){$("pnote").textContent=t("left",{n:cap(ci.id)});return}
+ var k=ci.id+"_"+size;cart[k]=(cart[k]||0)+1;save();$("pv").classList.remove("on");showCart()};
 
 /* cart */
 function lines(){return Object.keys(cart).map(function(k){var p=k.split("_");return {k:k,i:find(p[0]),s:p[1],q:cart[k]}}).filter(function(l){return l.i})}
-function renderCart(){var n=0,sum=0,h="";lines().forEach(function(l){n+=l.q;sum+=l.q*l.i.p;
- h+='<div class="row"><div class="th" style="background:'+l.i.c+'"></div><div class="inf">'+l.i.n+'<small>Размер '+l.s+' · '+money(l.i.p)+'</small><div class="qty"><button data-m="'+l.k+'" aria-label="Меньше">−</button><span>'+l.q+'</span><button data-p="'+l.k+'" aria-label="Больше">+</button></div></div><button class="rm" data-r="'+l.k+'">Удалить</button></div>'});
- $("list").innerHTML=h||'<div class="empty">Корзина пуста</div>';$("cnt").textContent=n;$("sum").textContent=money(sum);$("buy").disabled=!n;$("foot").style.display="";$("dt").textContent="Корзина"}
+function renderCart(){mode="cart";var n=0,sum=0,h="";lines().forEach(function(l){n+=l.q;sum+=l.q*l.i.p;
+ h+='<div class="row"><div class="th" style="background:'+l.i.c+'"></div><div class="inf">'+l.i.n+'<small>'+t("size")+' '+l.s+' · '+money(l.i.p)+'</small><div class="qty"><button data-m="'+l.k+'">−</button><span>'+l.q+'</span><button data-p="'+l.k+'">+</button></div></div><button class="rm" data-r="'+l.k+'">'+t("remove")+'</button></div>'});
+ $("list").innerHTML=h||'<div class="empty">'+t("empty")+'</div>';$("cnt").textContent=n;$("sum").textContent=money(sum);$("buy").disabled=!n;$("foot").style.display="";$("dt").textContent=t("cart")}
 function showCart(){renderCart();$("dr").classList.add("on");$("ov").classList.add("on")}
 function hideCart(){$("dr").classList.remove("on");$("ov").classList.remove("on")}
-function chg(k,d){cart[k]=(cart[k]||0)+d;if(cart[k]<=0)delete cart[k];save();renderCart()}
-$("list").onclick=function(e){var t=e.target,m=t.getAttribute("data-m"),p=t.getAttribute("data-p"),r=t.getAttribute("data-r");
+function chg(k,d){var pid=k.split("_")[0];if(d>0&&inCart(pid)>=cap(pid))return;cart[k]=(cart[k]||0)+d;if(cart[k]<=0)delete cart[k];save();renderCart()}
+$("list").onclick=function(e){var x=e.target,m=x.getAttribute("data-m"),p=x.getAttribute("data-p"),r=x.getAttribute("data-r");
  if(m)chg(m,-1);else if(p)chg(p,1);else if(r){delete cart[r];save();renderCart()}};
 $("open").onclick=showCart;$("close").onclick=$("ov").onclick=hideCart;
-$("cur").onchange=function(){cur=this.value;try{localStorage.setItem("cur",cur)}catch(e){}renderGrid();renderCart();if($("pv").classList.contains("on"))$("pp").innerHTML=priceHtml(ci)};
 
 /* checkout */
 var CT=[["Украина",380,9,9,/^\d{5}$/],["Польша",48,9,9,/^\d{2}-\d{3}$/],["Литва",370,8,8,/^(LT-?)?\d{5}$/i],["Латвия",371,8,8,/^(LV-?)?\d{4}$/i],["Эстония",372,7,8,/^\d{5}$/],["Чехия",420,9,9,/^\d{3} ?\d{2}$/],["Словакия",421,9,9,/^\d{3} ?\d{2}$/],["Венгрия",36,9,9,/^\d{4}$/],["Германия",49,10,11,/^\d{5}$/],["Италия",39,9,10,/^\d{5}$/],["Испания",34,9,9,/^\d{5}$/],["Румыния",40,9,9,/^\d{6}$/],["Молдова",373,8,8,/^(MD-?)?\d{4}$/i],["Австрия",43,10,11,/^\d{4}$/],["Франция",33,9,9,/^\d{5}$/],["Нидерланды",31,9,9,/^\d{4} ?[A-Za-z]{2}$/],["Великобритания",44,10,10,/^[A-Za-z]{1,2}\d[A-Za-z\d]? ?\d[A-Za-z]{2}$/]];
+var NE=["Ukraine","Poland","Lithuania","Latvia","Estonia","Czechia","Slovakia","Hungary","Germany","Italy","Spain","Romania","Moldova","Austria","France","Netherlands","United Kingdom"];
+var NU=["Україна","Польща","Литва","Латвія","Естонія","Чехія","Словаччина","Угорщина","Німеччина","Італія","Іспанія","Румунія","Молдова","Австрія","Франція","Нідерланди","Велика Британія"];
 var CITY={"Украина":["Київ","Харків","Одеса","Дніпро","Львів","Запоріжжя","Кривий Ріг","Миколаїв","Вінниця","Полтава","Чернігів","Черкаси","Житомир","Суми","Хмельницький","Рівне","Івано-Франківськ","Тернопіль","Луцьк","Ужгород","Чернівці","Кропивницький","Біла Церква","Кременчук"],"Польша":["Варшава","Краков","Вроцлав","Гданьск","Познань","Лодзь","Катовице","Люблин","Щецин"],"Литва":["Вильнюс","Каунас","Клайпеда","Шяуляй","Паневежис"],"Латвия":["Рига","Даугавпилс","Лиепая","Елгава","Юрмала"],"Эстония":["Таллин","Тарту","Нарва","Пярну"],"Чехия":["Прага","Брно","Острава","Пльзень","Либерец"],"Словакия":["Братислава","Кошице","Прешов","Жилина","Нитра"],"Венгрия":["Будапешт","Дебрецен","Сегед","Мишкольц","Печ"],"Германия":["Берлин","Гамбург","Мюнхен","Кёльн","Франкфурт-на-Майне","Штутгарт","Дюссельдорф","Лейпциг","Дрезден"],"Италия":["Рим","Милан","Неаполь","Турин","Болонья","Флоренция","Генуя"],"Испания":["Мадрид","Барселона","Валенсия","Севилья","Сарагоса","Малага"],"Румыния":["Бухарест","Клуж-Напока","Тимишоара","Яссы","Констанца"],"Молдова":["Кишинёв","Бельцы","Кахул","Орхей"],"Австрия":["Вена","Грац","Линц","Зальцбург","Инсбрук"],"Франция":["Париж","Марсель","Лион","Тулуза","Ницца","Лилль"],"Нидерланды":["Амстердам","Роттердам","Гаага","Утрехт","Эйндховен"],"Великобритания":["Лондон","Манчестер","Бирмингем","Лидс","Глазго","Ливерпуль","Эдинбург"]};
+var CITYE={"Польша":["Warsaw","Kraków","Wrocław","Gdańsk","Poznań","Łódź","Katowice","Lublin","Szczecin"],"Литва":["Vilnius","Kaunas","Klaipėda","Šiauliai","Panevėžys"],"Латвия":["Riga","Daugavpils","Liepāja","Jelgava","Jūrmala"],"Эстония":["Tallinn","Tartu","Narva","Pärnu"],"Чехия":["Prague","Brno","Ostrava","Plzeň","Liberec"],"Словакия":["Bratislava","Košice","Prešov","Žilina","Nitra"],"Венгрия":["Budapest","Debrecen","Szeged","Miskolc","Pécs"],"Германия":["Berlin","Hamburg","Munich","Cologne","Frankfurt","Stuttgart","Düsseldorf","Leipzig","Dresden"],"Италия":["Rome","Milan","Naples","Turin","Bologna","Florence","Genoa"],"Испания":["Madrid","Barcelona","Valencia","Seville","Zaragoza","Málaga"],"Румыния":["Bucharest","Cluj-Napoca","Timișoara","Iași","Constanța"],"Молдова":["Chișinău","Bălți","Cahul","Orhei"],"Австрия":["Vienna","Graz","Linz","Salzburg","Innsbruck"],"Франция":["Paris","Marseille","Lyon","Toulouse","Nice","Lille"],"Нидерланды":["Amsterdam","Rotterdam","The Hague","Utrecht","Eindhoven"],"Великобритания":["London","Manchester","Birmingham","Leeds","Glasgow","Liverpool","Edinburgh"]};
+var DMRU={branch:"Отделение",locker:"Почтомат",courier:"Курьер"};
 var cc=function(){return CT.filter(function(c){return c[0]===$("fc").value})[0]};
-var VOW="aeiouyаеёиоуыэюяіїє'’ʼ",CYR=/[А-Яа-яЁёІіЇїЄєҐґ]/,LAT=/[A-Za-z]/;
+var VOW="aeiouyаеёиоуыэюяіїє'’ʼàâäéèêëîïôöùûüœæąęóåøáíúýů",CYR=/[А-Яа-яЁёІіЇїЄєҐґ]/,LAT=/[A-Za-z]/;
 function nameOk(v){
  if(v.length<2||v.length>30)return false;
- if(!/^[A-Za-zА-Яа-яЁёІіЇїЄєҐґ'’ʼ\- ]+$/.test(v))return false;
+ if(!/^[\p{L}'’ʼ\- ]+$/u.test(v))return false;
  var w=v.split(/[ \-]+/);
  for(var k=0;k<w.length;k++){var x=w[k];if(!x)return false;
   var f=x.charAt(0);if(f!==f.toUpperCase()||f===f.toLowerCase())return false;
@@ -200,63 +228,65 @@ function nameOk(v){
   if(new RegExp("[^"+VOW+"]{5}","i").test(x))return false}
  return true}
 function err(id,m){var e=$(id),b=e.parentNode.classList.contains("ph")?e.parentNode:e;b.classList.toggle("err",!!m);$("e_"+id).textContent=m||""}
-function cleanText(e){e.value=e.value.replace(/[^A-Za-zА-Яа-яЁёІіЇїЄєҐґ'’ʼ\- ]/g,"")}
+function cleanText(e){e.value=e.value.replace(/[^\p{L}'’ʼ\- ]/gu,"")}
 function phone(){var c=cc(),mx=c[3],code=String(c[1]),d=$("f1").value.replace(/\D/g,"");
  if(d.indexOf(code)===0&&d.length>mx)d=d.slice(code.length);
  if(d.charAt(0)==="0")d=d.slice(1);
  var over=d.length>mx;if(over)d=d.slice(0,mx);
- $("f1").value=d;err("f1",over?(c[2]===mx?"Для этой страны номер содержит "+mx+" цифр, больше писать нельзя":"Для этой страны не больше "+mx+" цифр, больше писать нельзя"):"")}
-var dmv="";
-function setDm(){var ua=$("fc").value==="Украина",o=ua?["Отделение","Почтомат"]:["Отделение","Почтомат","Курьер"];
+ $("f1").value=d;err("f1",over?t("eMax",{n:mx}):"")}
+function cname(i){var l=lm().l;return l==="ru"?CT[i][0]:l==="uk"?NU[i]:NE[i]}
+function setDm(){var ua=$("fc").value==="Украина",o=ua?["branch","locker"]:["branch","locker","courier"];
  if(o.indexOf(dmv)<0)dmv="";
- $("dm").innerHTML=o.map(function(x){return '<button class="sz" aria-pressed="'+(x===dmv)+'" data-v="'+x+'">'+x+'</button>'}).join("");
- $("l5").textContent=dmv==="Отделение"?"Номер или адрес отделения":dmv==="Почтомат"?"Номер или адрес почтомата":dmv==="Курьер"?"Адрес (улица, дом, квартира)":"Выберите способ доставки и укажите номер или адрес"}
-function setC(){var ua=$("fc").value==="Украина";
+ $("dm").innerHTML=o.map(function(x){return '<button class="sz" aria-pressed="'+(x===dmv)+'" data-v="'+x+'">'+t(x)+'</button>'}).join("");
+ $("l5").textContent=dmv==="branch"?t("l5b"):dmv==="locker"?t("l5l"):dmv==="courier"?t("l5c"):t("l5n")}
+function setC(){var k=$("fc").value,ua=k==="Украина",l=lm().l;
  [].forEach.call(document.querySelectorAll(".intl"),function(d){d.style.display=ua?"none":""});
- setDm();
- $("pre").textContent="+"+cc()[1];phone();
- $("cl").innerHTML=(CITY[$("fc").value]||[]).map(function(c){return '<option value="'+c+'">'}).join("");$("f4").value="";err("f4","")}
-$("buy").onclick=function(){
- $("dt").textContent="Оформление";$("foot").style.display="none";
- $("list").innerHTML='<label>Выберите страну</label><select class="f" id="fc">'+CT.map(function(c){return '<option value="'+c[0]+'">'+c[0]+'</option>'}).join("")+'</select>'+
- '<label>Номер телефона</label><div class="ph"><span id="pre">+380</span><input id="f1" type="tel" inputmode="numeric" autocomplete="tel-national"></div><div class="em" id="e_f1"></div>'+
- '<label>Фамилия</label><input id="f2" autocomplete="family-name"><div class="hint">Пишите обязательно с большой буквы</div><div class="em" id="e_f2"></div>'+
- '<label>Имя</label><input id="f3" autocomplete="given-name"><div class="hint">Пишите обязательно с большой буквы</div><div class="em" id="e_f3"></div>'+
- '<label>Ваш @username в Telegram <span style="color:#c00">(обязательно)</span></label><input id="ft" placeholder="@username" autocapitalize="off" autocomplete="off" maxlength="33"><div class="em" id="e_ft"></div>'+
- '<div class="intl" style="display:none"><label>Email (для отслеживания заказа)</label><input id="fe" type="email" autocomplete="email"><div class="em" id="e_fe"></div></div>'+
- '<label>Город или село</label><input id="f4" list="cl" autocomplete="off" placeholder="Выберите из списка или напишите свой"><datalist id="cl"></datalist><div class="em" id="e_f4"></div>'+
- '<div class="intl" style="display:none"><label>Почтовый индекс</label><input id="fz" autocomplete="postal-code"><div class="em" id="e_fz"></div></div>'+
- '<label>Способ доставки</label><div class="sizes" id="dm"></div><div class="hint">Доставка осуществляется исключительно Новой почтой</div><div class="em" id="e_dm"></div>'+
- '<label id="l5">Номер или адрес отделения</label><input id="f5"><div class="em" id="e_f5"></div>'+
- '<button class="btn" id="send">Оформить заказ</button><button class="btn alt" id="back">Назад в корзину</button>';
- dmv="";$("fc").onchange=setC;$("f1").oninput=phone;
+ setDm();$("pre").textContent="+"+cc()[1];phone();
+ var list=(ua||l==="ru"||l==="uk")?CITY[k]:CITYE[k];
+ $("cl").innerHTML=(list||[]).map(function(c){return '<option value="'+c+'">'}).join("");$("f4").value="";err("f4","")}
+$("buy").onclick=function(){mode="form";dmv="";
+ $("dt").textContent=t("chkT");$("foot").style.display="none";
+ $("list").innerHTML='<label>'+t("country")+'</label><select class="f" id="fc">'+CT.map(function(c,i){return '<option value="'+c[0]+'">'+cname(i)+'</option>'}).join("")+'</select>'+
+ '<label>'+t("phone")+'</label><div class="ph"><span id="pre">+380</span><input id="f1" type="tel" inputmode="numeric" autocomplete="tel-national"></div><div class="em" id="e_f1"></div>'+
+ '<label>'+t("last")+'</label><input id="f2" autocomplete="family-name"><div class="hint">'+t("caps")+'</div><div class="em" id="e_f2"></div>'+
+ '<label>'+t("first")+'</label><input id="f3" autocomplete="given-name"><div class="hint">'+t("caps")+'</div><div class="em" id="e_f3"></div>'+
+ '<label>'+t("tg")+' <span style="color:#c00">'+t("req")+'</span></label><input id="ft" placeholder="@username" autocapitalize="off" autocomplete="off" maxlength="33"><div class="em" id="e_ft"></div>'+
+ '<div class="intl" style="display:none"><label>'+t("email")+'</label><input id="fe" type="email" autocomplete="email"><div class="em" id="e_fe"></div></div>'+
+ '<label>'+t("city")+'</label><input id="f4" list="cl" autocomplete="off" placeholder="'+t("cityPh")+'"><datalist id="cl"></datalist><div class="em" id="e_f4"></div>'+
+ '<div class="intl" style="display:none"><label>'+t("zip")+'</label><input id="fz" autocomplete="postal-code"><div class="em" id="e_fz"></div></div>'+
+ '<label>'+t("dm")+'</label><div class="sizes" id="dm"></div><div class="hint">'+t("np")+'</div><div class="em" id="e_dm"></div>'+
+ '<label id="l5"></label><input id="f5"><div class="em" id="e_f5"></div>'+
+ '<button class="btn" id="send">'+t("place")+'</button><button class="btn alt" id="back">'+t("back")+'</button>';
+ $("fc").onchange=setC;$("f1").oninput=phone;
  $("dm").onclick=function(e){var v=e.target.getAttribute("data-v");if(v){dmv=v;err("dm","");setDm()}};
  ["f2","f3","f4"].forEach(function(id){$(id).oninput=function(){cleanText(this);err(id,"")}});
  $("ft").oninput=function(){var v=this.value.replace(/[^A-Za-z0-9_]/g,"");this.value=v?"@"+v:"";err("ft","")};
  $("back").onclick=renderCart;$("send").onclick=submit;setC()};
 function submit(){var c=cc(),ua=c[0]==="Украина",ok=true;
  function bad(id,m){err(id,m);ok=false}
- var d=$("f1").value;if(d.length<c[2]||d.length>c[3])bad("f1","Введите номер полностью: "+(c[2]===c[3]?c[2]+" цифр":c[2]+"–"+c[3]+" цифр")+" после +"+c[1]);else err("f1","");
- ["f2","f3"].forEach(function(id){var v=$(id).value.trim();if(!nameOk(v))bad(id,"Только буквы, настоящее "+(id==="f2"?"фамилия":"имя")+", с большой буквы");else err(id,"")});
- var city=$("f4").value.trim();if(!/[A-Za-zА-Яа-яІіЇїЄєҐґ]{2}/.test(city))bad("f4","Укажите город");else err("f4","");
- var tg=$("ft").value.trim();if(!/^@[A-Za-z][A-Za-z0-9_]{4,31}$/.test(tg))bad("ft","Введите ваш @username из Telegram (от 5 символов, латиницей)");else err("ft","");
- if(!dmv)bad("dm","Выберите: отделение или почтомат");else err("dm","");
- if(!$("f5").value.trim())bad("f5","Заполните это поле");else err("f5","");
- if(!ua){if(!/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test($("fe").value.trim()))bad("fe","Введите правильный email");else err("fe","");
-  if(!c[4].test($("fz").value.trim()))bad("fz","Неверный индекс для этой страны");else err("fz","")}
+ var d=$("f1").value;if(d.length<c[2]||d.length>c[3])bad("f1",t("eFull",{r:c[2]===c[3]?c[2]:c[2]+"–"+c[3],c:c[1]}));else err("f1","");
+ ["f2","f3"].forEach(function(id){if(!nameOk($(id).value.trim()))bad(id,t("eName"));else err(id,"")});
+ var tg=$("ft").value.trim();if(!/^@[A-Za-z][A-Za-z0-9_]{4,31}$/.test(tg))bad("ft",t("eTg"));else err("ft","");
+ var city=$("f4").value.trim();if(!/\p{L}{2}/u.test(city))bad("f4",t("eCity"));else err("f4","");
+ if(!dmv)bad("dm",t("eDm"));else err("dm","");
+ if(!$("f5").value.trim())bad("f5",t("eFill"));else err("f5","");
+ if(!ua){if(!/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test($("fe").value.trim()))bad("fe",t("eMail"));else err("fe","");
+  if(!c[4].test($("fz").value.trim()))bad("fz",t("eZip"));else err("fz","")}
  if(!ok)return;
- var sum=0,t="Новый заказ GLEKEMIA\n\n";lines().forEach(function(l){sum+=l.q*l.i.p;t+=l.i.n+" · "+l.s+" · "+l.q+" шт · "+money(l.i.p*l.q)+"\n"});
- t+="\nИтого: "+money(sum)+" ("+cur+")\n\nСтрана: "+c[0]+"\nТелефон: +"+c[1]+d+"\nФамилия: "+$("f2").value.trim()+"\nИмя: "+$("f3").value.trim()+"\nTelegram: "+tg+(ua?"":"\nEmail: "+$("fe").value.trim())+"\nГород: "+city+(ua?"":"\nПочтовый индекс: "+$("fz").value.trim())+"\nСпособ доставки (Новая почта): "+dmv+"\n"+$("l5").textContent+": "+$("f5").value.trim();
- var url="https://t.me/"+TG+"?text="+encodeURIComponent(t);
- if(ORDER_URL){$("send").disabled=true;$("send").textContent="Отправляем…";
-  fetch(ORDER_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({text:t})}).then(function(r){if(!r.ok)throw 0;done("")}).catch(function(){$("send").disabled=false;$("send").textContent="Оформить заказ";err("f5","Не удалось отправить заказ, попробуйте ещё раз")})}
+ var sum=0,m="Новый заказ GLEKEMIA\n\n";lines().forEach(function(l){sum+=l.q*l.i.p;m+=l.i.n+" · "+l.s+" · "+l.q+" шт · "+money(l.i.p*l.q)+"\n"});
+ m+="\nИтого: "+money(sum)+" ("+cur+")\n\nСтрана: "+c[0]+"\nТелефон: +"+c[1]+d+"\nФамилия: "+$("f2").value.trim()+"\nИмя: "+$("f3").value.trim()+"\nTelegram: "+tg+(ua?"":"\nEmail: "+$("fe").value.trim())+"\nГород: "+city+(ua?"":"\nПочтовый индекс: "+$("fz").value.trim())+"\nСпособ доставки (Новая почта): "+DMRU[dmv]+"\n"+(dmv==="branch"?"Номер или адрес отделения":dmv==="locker"?"Номер или адрес почтомата":"Адрес")+": "+$("f5").value.trim();
+ var url="https://t.me/"+TG+"?text="+encodeURIComponent(m);
+ if(ORDER_URL){$("send").disabled=true;$("send").textContent=t("sending");
+  fetch(ORDER_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({text:m})}).then(function(r){if(!r.ok)throw 0;done("")}).catch(function(){$("send").disabled=false;$("send").textContent=t("place");err("f5",t("eSend"))})}
  else{window.open(url,"_blank");done(url)}}
-function done(url){
- $("dt").textContent="Заказ оформлен";
- $("list").innerHTML='<div class="note" style="text-align:left;margin:0 0 14px;font-size:15px;color:var(--fg)">Спасибо за заказ! Наш менеджер свяжется с вами в Telegram для оплаты :)</div>'+(url?'<div class="note" style="text-align:left;margin:0 0 14px">Чтобы мы получили заказ, нажмите «Отправить» в открывшемся Telegram.</div><a class="btn alt" target="_blank" rel="noopener" href="'+url+'">Открыть Telegram снова</a>':'')+'<button class="btn" id="clr">Готово</button>';
+function done(url){mode="done";
+ $("dt").textContent=t("doneT");
+ $("list").innerHTML='<div class="note" style="text-align:left;margin:0 0 14px;font-size:15px;color:var(--fg)">'+t("thanks")+'</div>'+(url?'<div class="note" style="text-align:left;margin:0 0 14px">'+t("tgnote")+'</div><a class="btn alt" target="_blank" rel="noopener" href="'+url+'">'+t("again")+'</a>':'')+'<button class="btn" id="clr">'+t("ok")+'</button>';
  $("clr").onclick=function(){cart={};save();renderCart();hideCart()}}
-(function(){var el=$("bf"),t=el.textContent,s=7;el.textContent="";function r(){s=(s*9301+49297)%233280;return s/233280-.5}t.split("").forEach(function(ch){var i=document.createElement("i");i.textContent=ch===" "?"\u00a0":ch;i.style.transform="translateY("+(r()*16).toFixed(1)+"px) rotate("+(r()*36).toFixed(1)+"deg) scale("+(1+r()*.4).toFixed(2)+")";i.style.marginRight=(r()*6).toFixed(1)+"px";el.appendChild(i)})})();
-renderGrid();renderCart();
+
+(function(){var s=7;function r(){s=(s*9301+49297)%233280;return s/233280-.5}[].forEach.call(document.querySelectorAll(".bf"),function(el){var tx=el.textContent;el.textContent="";tx.split("").forEach(function(ch){var i=document.createElement("i");i.textContent=ch===" "?"\u00a0":ch;i.style.transform="translateY("+(r()*16).toFixed(1)+"px) rotate("+(r()*36).toFixed(1)+"deg) scale("+(1+r()*.4).toFixed(2)+")";i.style.marginRight=(r()*6).toFixed(1)+"px";el.appendChild(i)})})})();
+try{fetch("stock.json?v="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.json():null}).then(function(d){if(d&&typeof d==="object"){stock=d;light()}}).catch(function(){})}catch(e){}
+refresh();
 </script>
 </body>
 </html>
